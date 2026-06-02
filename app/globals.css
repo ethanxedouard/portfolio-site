@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── TOKENS ── */
+:root {
+  --bg: #ffffff;
+  --bg2: #f7f7f7;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --card: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --border2: rgba(0, 0, 0, 0.05);
+  --ink: #0a0a0a;
+  --ink2: #5f6062;
+  --ink3: #a0a4a8;
+  --accent: #e51937;
+  --navy: #003a63;
+  --mono-bg: rgba(229, 25, 55, 0.06);
+  --tag-bg: #f2f2f2;
+  --tag-text: #5f6062;
+  --green: #16a34a;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dark {
+  --bg: #0a0a0a;
+  --bg2: #141414;
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --card: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.08);
+  --border2: rgba(255, 255, 255, 0.05);
+  --ink: #f5f5f5;
+  --ink2: #9aa0a3;
+  --ink3: #555555;
+  --accent: #e51937;
+  --navy: #4d9bcc;
+  --mono-bg: rgba(229, 25, 55, 0.1);
+  --tag-bg: #1a1a1a;
+  --tag-text: #9aa0a3;
+  --green: #22c55e;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ── BASE ── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  transition: background 0.25s, color 0.25s;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(229, 25, 55, 0.15);
+  color: var(--ink);
+}
+
+/* ── TYPOGRAPHY UTILITIES ── */
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::before {
+  content: "#";
+  color: var(--accent);
+  font-size: 13px;
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* ── BADGE ── */
+.award-badge {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--mono-bg);
+  border: 1px solid rgba(229, 25, 55, 0.18);
+  border-radius: 3px;
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+
+/* ── FADE IN ANIMATION ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
