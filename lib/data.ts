@@ -45,7 +45,7 @@ export type Award = {
   org: string;
   description: string;
   year: string;
-  type: "Fellowship" | "Award" | "Honor" | "Scholarship";
+  type: "Fellowship" | "Award" | "Honor" | "Scholarship" | "Professional Development";
 };
 
 export const AWARDS: Award[] = [
@@ -64,6 +64,14 @@ export const AWARDS: Award[] = [
       "Selected for a competitive undergraduate research fellowship focused on distributed and sustainable computing systems. Developed Docker- and Kubernetes-based infrastructure for edge computing, transforming discarded smartphones into scalable compute clusters as part of the Junkyard Computing (RAIS) initiative. Awarded $12,000 in research funding.",
     year: "2026 – Present",
     type: "Fellowship",
+  },
+  {
+    title: "Google Career Launchpad Program",
+    org: "Google",
+    description:
+      "Completed Google Cloud’s Career Launchpad program, gaining hands-on experience in generative AI, cloud computing, and emerging AI technologies through practical labs and industry-developed coursework. Developed technical skills in AI and cloud infrastructure while earning Google credentials and preparing for an AI-driven technology workforce.",
+    year: "2026 – Present",
+    type: "Professional Development",
   },
 ];
 
