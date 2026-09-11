@@ -131,6 +131,19 @@ export default async function ProjectDetailPage({
             <CalendarIcon /> {project.date}
           </span>
 
+          {project.result && (
+            <span
+              className="flex items-center gap-1.5 text-[11px] tracking-[0.02em] px-2.5 py-1 rounded-full border"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  color: "#B8860B",
+                  borderColor: "#B8860B",
+                  background: "rgba(184,134,11,0.08)",
+                }}
+            >
+              <StarIcon /> {project.result}
+            </span>
+          )}
           {/* Buttons */}
           <div className="flex gap-2 ml-auto">
             {project.github && (

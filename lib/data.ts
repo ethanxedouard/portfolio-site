@@ -38,6 +38,16 @@ export const EXPERIENCE: Experience[] = [
     logoBg: "#182B49",
     logo: "UC",
   },
+  {
+    role: "Resident Assistant",
+    company: "Howard University",
+    period: "July 2026 – Present",
+    description:
+      "Serve as a Resident Assistant for Howard University Towers Plaza East, supporting a residential community of 102 students through programming, conflict resolution, and day-to-day student support.",
+    image: "/logos/howard-crest.png",  
+    logoBg: "#182B49",
+    logo: "UC",
+  },
 ];
 
 export type Award = {
@@ -45,7 +55,7 @@ export type Award = {
   org: string;
   description: string;
   year: string;
-  type: "Fellowship" | "Award" | "Honor" | "Scholarship" | "Professional Development";
+  type: "Fellowship" | "Award" | "Honor" | "Scholarship" | "Professional Development" | "Hackathon";
 };
 
 export const AWARDS: Award[] = [
@@ -58,6 +68,22 @@ export const AWARDS: Award[] = [
     type: "Scholarship",
   },
   {
+    title: "Google Career Launchpad Program",
+    org: "Google",
+    description:
+      "Completed Google Cloud’s Career Launchpad program, gaining hands-on experience in generative AI, cloud computing, and emerging AI technologies through practical labs and industry-developed coursework. Developed technical skills in AI and cloud infrastructure while earning Google credentials and preparing for an AI-driven technology workforce.",
+    year: "2026 – Present",
+    type: "Professional Development",
+  },
+  {
+    title: "HU Boeing Academy",
+    org: "Boeing / Howard University",
+    description:
+      "Completed Google Cloud’s Career Launchpad program, gaining hands-on experience in generative AI, cloud computing, and emerging AI technologies through practical labs and industry-developed coursework. Developed technical skills in AI and cloud infrastructure while earning Google credentials and preparing for an AI-driven technology workforce.",
+    year: "2026 – Present",
+    type: "Professional Development",
+  },
+  {
     title: "Matthew Henson Fellow, Kastner Research Group",
     org: "University of California, San Diego",
     description:
@@ -66,12 +92,20 @@ export const AWARDS: Award[] = [
     type: "Fellowship",
   },
   {
-    title: "Google Career Launchpad Program",
-    org: "Google",
+    title: "Brother 2 Brother Undergraduate Scholarship",
+    org: "Alpha Phi Alpha Fraternity, Inc. — Beta Chapter",
     description:
-      "Completed Google Cloud’s Career Launchpad program, gaining hands-on experience in generative AI, cloud computing, and emerging AI technologies through practical labs and industry-developed coursework. Developed technical skills in AI and cloud infrastructure while earning Google credentials and preparing for an AI-driven technology workforce.",
-    year: "2026 – Present",
-    type: "Professional Development",
+      "Recipient of the Beta Chapter's Brother 2 Brother Undergraduate Scholarship, awarded to undergraduate members demonstrating academic achievement and campus/community leadership.",
+    year: "2026",
+    type: "Scholarship",
+  },
+  {
+    title: "BisonHacks 2026 — 3rd Place, Best Use of ElevenLabs",
+    org: "Howard University School of Business",
+    description:
+      "Placed 3rd overall and won Best Use of ElevenLabs at BisonHacks 2026 for an ASL detection system built with MediaPipe and Random Forest classification.",
+    year: "2026",
+    type: "Hackathon",
   },
 ];
 
@@ -90,6 +124,7 @@ export type Project = {
   highlights: [string, string][];
   architecture: string;
   learned: string;
+  result?: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -128,6 +163,7 @@ export const PROJECTS: Project[] = [
     tagline: "A real-time computer vision system that recognizes American Sign Language gestures using machine learning.",
     description: "Built a live ASL recognition system using MediaPipe and Random Forest classification. Processes webcam input locally with confidence-based verification for reliable gesture detection.",
     date: "Feb 2026",
+    result: "3rd Place + Best Use of ElevenLabs — BisonHacks 2026",
     coverImage: "/projects/asl-detection.png",  // place screenshot at public/projects/fieldwork.png
     tags: ["python", "opencv", "mediapipe", "scikit-learn", "machine-learning"],
     github: "https://github.com/armstrongterry87/BisonHacks-2026-ASL",
