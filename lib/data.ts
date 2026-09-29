@@ -39,6 +39,26 @@ export const EXPERIENCE: Experience[] = [
     logo: "UC",
   },
   {
+    role: "Co-Founder & Co-Developer",
+    company: "The Lookbook",
+    period: "July 2025 – Present",
+    description:
+      "Co-founded and co-developed a mobile fashion organization app with 300+ active users; developed React Native features and UI, contributed to application architecture, and integrated Supabase for user authentication and cloud data management.",
+    image: "/logos/lookbook_logo.png",  
+    logoBg: "#182B49",
+    logo: "Lookbook",
+  },
+  {
+    role: "Founder & Executive Director",
+    company: "It Starts With Us",
+    period: "August 2025 – Present",
+    description:
+      "Founded a nonprofit focused on student development and community engagement; built partnerships with local organizations and developed technology initiatives to expand educational and volunteer opportunities.",
+    image: "/logos/iswu_logo.png",  
+    logoBg: "#182B49",
+    logo: "ISWU",
+  },
+  {
     role: "Resident Assistant",
     company: "Howard University",
     period: "July 2026 – Present",
